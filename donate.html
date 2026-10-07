@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поддержать проект | AnimalCare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🐾  AnimalCare</div>
+        <ul>
+            <section class="content-page donate-section">
+    <h1>Помогите нам спасать жизни</h1>
+    <p>Ваш перевод — это лекарства, теплые лежанки и сытая миска для животных.</p>
+
+    <div class="donate-card">
+        <h3>Перечислить на карту</h3>
+        <div class="card-number" id="cardNumber">37377</div>
+        <button class="btn-copy" onclick="copyNumber()">Копировать номер</button>
+        <p class="hint">Нажмите кнопку, чтобы скопировать номер для перевода в вашем банковском приложении</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 AnimalCare Project.</p>
+</footer>
+
+<script>
+    function copyNumber() {
+        const number = document.getElementById('cardNumber').innerText;
+        navigator.clipboard.writeText(number).then(() => {
+            alert("Номер скопирован: " + number);
+        });
+    }
+</script>
